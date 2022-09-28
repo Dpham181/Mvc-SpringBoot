@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+      <head>
+<meta charset="ISO-8859-1">
+
+<link th:href="@{/css/home.css}" rel="stylesheet" />
+
+<title th:text="${title}"></title>
+<header> 
+
+<h1 th:text="${context}" ></h1>
+
+</header>
+</head>
+<body>
+<div>
+<form action="#" th:action="@{/save}" th:object="${country}" method="post">
+<div class="row">
+ <div> Country Name: </div> 
+
+<div><input type="text" th:field="*{name}"> </div>
+</div>
+<div class="row" > 
+
+<div>Capital Name: </div>
+<div><input type="text" th:field="*{capital}"></div> 
+</div>
+<div class="row"> Population: 
+<input type="number" th:field="*{Population}"> 
+</div>
+<div>
+<button type="submit">save</button>
+</div>
+</form>
+</div>
+</body>
+ 
+</html>

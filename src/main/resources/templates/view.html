@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+      <head>
+<meta charset="ISO-8859-1">
+
+<link th:href="@{/css/home.css}" rel="stylesheet" />
+
+<title th:text="${title}"></title>
+<header> 
+
+<h1 th:text="${context}" ></h1>
+
+</header>
+</head>
+<body>
+<div>
+<table>
+  <tr>
+    <th>Country Name</th>
+    <th>Capital Name</th>
+    <th>Population</th>
+   
+  </tr>
+    <td th:text="${country.name}"/>
+    <td th:text="${country.capital}"/>
+      <td th:text="${country.Population}"/>
+  
+</table>
+</div>
+
+<div>
+
+  <a   th:href="@{/edit/{id}(id=${country.id})}">Edit</a>
+
+</div>
+</body>
+ 
+</html>

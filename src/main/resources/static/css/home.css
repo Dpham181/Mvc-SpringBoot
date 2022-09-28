@@ -1,0 +1,40 @@
+html {
+ height:100wh;
+ width:100wh;
+}
+body{
+ display:flex;
+ justify-content:center;
+ background-color:green;
+ align-items:center;
+ flex-direction:column;
+
+}
+form{
+  display:flex;
+  flex-direction:column;
+    justify-content:space-evenly;
+  
+ 
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  text-align:center;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.row{
+  display:flex;
+  justify-content:space-between;
+  flex-direction:row;
+  align-items:start;
+  
+}

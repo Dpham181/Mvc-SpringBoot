@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+      <head>
+<meta charset="ISO-8859-1">
+
+<link th:href="@{/css/home.css}" rel="stylesheet" />
+
+<title th:text="${title}"></title>
+<header> 
+
+<h1 th:text="${context}" ></h1>
+
+</header>
+</head>
+<body>
+<div>
+<table>
+  <tr>
+    <th>Country Name</th>
+   
+  </tr>
+<tr th:each="c: ${ListofCountries}">
+    <td><a th:text="${c.name}" th:href="@{/view/{id}(id=${c.id})}"></a> </td>
+  
+</tr>
+</table>
+</div>
+
+<div>
+
+<form>
+  <button  formaction="/create">Add New Country</button>
+</form>
+
+</div>
+</body>
+ 
+</html>
